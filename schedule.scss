@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+{<html lang="en">}
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="stylesheet" href="main.7b371350.css">
+        <link rel="stylesheet" href="_reboot.css">
+        <link rel="stylesheet" href="_root.css"> -->
+        <link rel="stylesheet" href="schedule.css">
+        <title>Schedule A Pickup</title>
+
+        <link rel="stylesheet" href="about.css">
+        <link rel="stylesheet" href="bootstrap.css">
+        <link rel="stylesheet" href="font-awesome.css">
+        <link href=" https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="page-wrapper">	  
+            <section id="header">
+                <a href="#"><img src="img/LOGO.png" class="logo" alt="" style="width:90px;height:80px;margin-top: -10px;"></a>
+        
+                <div>
+                    <ul id="navbar">
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="price.html">Price List</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="pickup.html" class="pickup" style="color: green;"><b>REQUEST FOR PICKUP</b></a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <body>
+                <noscript>
+                    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MKQPF3" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+                </noscript>
+                <div id="root"><ion-app class="md ion-page">
+                    <ion-router-outlet><div class="localHeader_main ">
+                        <!-- <div class="container header_main">
+                            <nav class="navbar navbar-expand-lg navbar-light bg-light w-100">
+                                <a class="navbar-brand" href="/home"><img class="local_header_logo" src="https://ik.imagekit.io/h1rxzpffx/scrapuncle/ScrapuncleLogo_SNODTjW3kT.png" alt="Scrapuncle - Recycling Made Easy"></a>
+                                <div class="mobile-menu-container">
+                                    <div class="mobile-only instant-schedule-btn">
+                                        <a class="" href="/home#schedulePickup" style="display: block; max-width: 100px; font-weight: bold; font-size: 12px; text-align: center; background: rgb(58, 179, 74); padding: 4px; border-radius: 4px; color: rgb(255, 255, 255); font-family: Montserrat;">Schedule Pickup</a></div>
+                                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                                    </div>
+                                    <div class="navbar-collapse" id="navbarSupportedContent">
+                                        <ul class="header_ul navbar-nav"><a href="/home">
+                                            <li class=" nav-item">Home</li>
+                                        </a>
+                                        <a href="/local-rate"> <li class="">Scrap Rates</li></a>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <a class="desktop-only" href="https://play.google.com/store/apps/details?id=com.swapeco.app" target="_blank" rel="noreferrer">
+                                <img src="https://ik.imagekit.io/y8s2vhk66ef/image_1_3f6VbLy6MIW.png?updatedAt=1628624822923" alt="Download Scrapuncle App" style="max-height: 50px;">
+                            </a>
+                        </div> -->
+                        <div class="site-notice">We are currently operational in Solapur</div>
+                    </div>
+                    <div class="local_schdule_div style-2">
+                        <div class="sidebar_overlayClose"></div>
+                        <div class="location_sidebar">
+                        <div class="sidebar-content style-2">
+                            <div class="sidebar_content_top">
+                            <div class="cursor-pointer">
+                                <ion-icon icon="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'>
+                                    <title>Close</title><path stroke-linecap='round' stroke-linejoin='round' d='M368 368L144 144M368 144L144 368' class='ionicon-fill-none ionicon-stroke-width'/></svg>" style="font-size: 1.8rem;" role="img" class="md">
+
+                                </ion-icon>
+                            </div>
+                            <p> Set pickup location</p>
+                        </div>
+                        <div class="map_design hidden">
+
+                        </div>
+                        <div>
+                            <form>
+                                <div class="address_search_box  main_address_div">
+                                    <label for="landmark" class=" ">Enter Full Address <span style="color: red;">*</span></label>
+                                    <input name="line1" placeholder="House no., building, apartment" type="text" class="searchBox_input" id="line1" autocomplete="new-password">
+                                </div>
+                                <div class="address_search_box landmark_box">
+                                    <label class="" for="landmark"> Landmark</label>
+                                    <input name="landmark" placeholder="E.g. near apollo hospital" type="text" class="searchBox_input" id="landmark" autocomplete="new-password">
+                                </div>
+                                <div class="address_search_box pincode_box">
+                                    <label class="" for="pincode"> Pincode <span style="color: red;">*</span></label>
+                                    <input name="pincode" type="number" placeholder="6 digits [0-9] PIN code" maxlength="6" class="searchBox_input searchBox_input" autocomplete="new-password" value="">
+                                </div>
+                                <div class="title_set">
+                                    <div class="first_title ">
+                                        <ion-icon icon="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'><title>Home</title><path d='M80 212v236a16 16 0 0016 16h96V328a24 24 0 0124-24h80a24 24 0 0124 24v136h96a16 16 0 0016-16V212' stroke-linecap='round' stroke-linejoin='round' class='ionicon-fill-none ionicon-stroke-width'/>
+                                            <path d='M480 256L266.89 52c-5-5.28-16.69-5.34-21.78 0L32 256M400 179V64h-48v69' stroke-linecap='round' stroke-linejoin='round' class='ionicon-fill-none ionicon-stroke-width'/></svg>" role="img" class="md">
+                                        </ion-icon><span class=""> Home</span></div><div class="second_title ">
+                                            <ion-icon icon="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'>
+                                                <title>Bag</title>
+                                                <path stroke-linecap='round' stroke-linejoin='round' d='M80 176a16 16 0 00-16 16v216c0 30.24 25.76 56 56 56h272c30.24 0 56-24.51 56-54.75V192a16 16 0 00-16-16zM160 176v-32a96 96 0 0196-96h0a96 96 0 0196 96v32' class='ionicon-fill-none ionicon-stroke-width'/></svg>" role="img" class="md">
+                                            </ion-icon><span class=""> Work</span>
+                                        </div>
+                                        <div class="third_title ">
+                                            <ion-icon icon="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'>
+                                                <title>Location</title>
+                                                <path d='M256 48c-79.5 0-144 61.39-144 137 0 87 96 224.87 131.25 272.49a15.77 15.77 0 0025.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137z' stroke-linecap='round' stroke-linejoin='round' class='ionicon-fill-none ionicon-stroke-width'/>
+                                                <circle cx='256' cy='192' r='48' stroke-linecap='round' stroke-linejoin='round' class='ionicon-fill-none ionicon-stroke-width'/></svg>" role="img" class="md">
+                                            </ion-icon><span class="">Other</span>
+                                        </div>
+                                    </div>
+                                    <p class="ignored_label"> Fields marked with <span style="color: red;">*</span> can’t be ignored</p>
+                                    <button type="submit" class="current_location skip_btn save_address_button">
+                                        <p class="save_address_p">SAVE ADDRESS &amp;PROCEED</p>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="container ">
+                        <div class="row">
+                            <div class="col-md-12 col-lg-7 schedule_pickup_div style-2">
+                                <div class="back_icon_">
+                                    <ion-icon icon="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'>
+                                        <title>Arrow Back</title>
+                                        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='48' d='M244 400L100 256l144-144M120 256h292' class='ionicon-fill-none'/>
+                                        </svg>" color="black" role="img" class="md ion-color ion-color-black">
+                                    </ion-icon>
+                                </div>
+                                <div class="accordion">
+                                        <div class="date_nd_time">
+                                            <div class="row">
+                                                <div class="col-md-6 mt-3">
+                                                    <div class="schedule_date">
+                                                        <p class="schedule_title">Enter Date</p>
+                                                        <div class="calendar_nd_date">
+                                                            <div class="accordion-item">
+                                                                <h2 class=" w-100 accordion-header">
+                                                                    <button type="button" aria-expanded="false" class="accordion-button collapsed">
+                                                                        <div class="d-flexs align-items-center ">
+                                                                            <ion-icon icon="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'>
+                                                                                    <title>Calendar</title>
+                                                                                    <path d='M480 128a64 64 0 00-64-64h-16V48.45c0-8.61-6.62-16-15.23-16.43A16 16 0 00368 48v16H144V48.45c0-8.61-6.62-16-15.23-16.43A16 16 0 00112 48v16H96a64 64 0 00-64 64v12a4 4 0 004 4h440a4 4 0 004-4zM32 416a64 64 0 0064 64h320a64 64 0 0064-64V179a3 3 0 00-3-3H35a3 3 0 00-3 3zm344-208a24 24 0 11-24 24 24 24 0 0124-24zm0 80a24 24 0 11-24 24 24 24 0 0124-24zm-80-80a24 24 0 11-24 24 24 24 0 0124-24zm0 80a24 24 0 11-24 24 24 24 0 0124-24zm0 80a24 24 0 11-24 24 24 24 0 0124-24zm-80-80a24 24 0 11-24 24 24 24 0 0124-24zm0 80a24 24 0 11-24 24 24 24 0 0124-24zm-80-80a24 24 0 11-24 24 24 24 0 0124-24zm0 80a24 24 0 11-24 24 24 24 0 0124-24z'/>
+                                                                                    </svg>" role="img" class="md">
+                                                                                </ion-icon>
+                                                                                <span>DD/MM/YY</span>
+                                                                                <ion-icon icon="data:image/svg+xml;utf8,
+                                                                                <svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'>
+                                                                                    <title>Chevron Down</title>
+                                                                                    <path stroke-linecap='round' stroke-linejoin='round' stroke-width='48' d='M112 184l144 144 144-144' class='ionicon-fill-none'/>
+                                                                                </svg>" class="arrow_down_icon md" role="img">
+                                                                            </ion-icon>
+                                                                        </div>
+                                                                    </button>
+                                                                </h2>
+                                                                <div class="accordion-collapse collapse">
+                                                                    <div class="accordion-body">
+                                                                        <div>
+                                                                            <div class="react-datepicker">
+                                                                                <div class="react-datepicker__triangle">
+
+                                                                                </div>
+                                                                                <button type="button" class="react-datepicker__navigation react-datepicker__navigation--previous" aria-label="Previous Month">Previous Month</button>
+                                                                                <button type="button" class="react-datepicker__navigation react-datepicker__navigation--next" aria-label="Next Month">Next Month</button>
+                                                                                <div class="react-datepicker__month-container">
+                                                                                    <div class="react-datepicker__header ">
+                                                                                        <div class="react-datepicker__current-month">May 2023</div>
+                                                                                        <div class="react-datepicker__header__dropdown react-datepicker__header__dropdown--scroll"></div>
+                                                                                        <div class="react-datepicker__day-names">
+                                                                                            <div class="react-datepicker__day-name">Su</div>
+                                                                                            <div class="react-datepicker__day-name">Mo</div>
+                                                                                            <div class="react-datepicker__day-name">Tu</div>
+                                                                                            <div class="react-datepicker__day-name">We</div>
+                                                                                            <div class="react-datepicker__day-name">Th</div>
+                                                                                            <div class="react-datepicker__day-name">Fr</div>
+                                                                                            <div class="react-datepicker__day-name">Sa</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="react-datepicker__month" aria-label="month  2023-05">
+                                                                                        <div class="react-datepicker__week">
+                                                                                            <div class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--disabled react-datepicker__day--weekend react-datepicker__day--outside-month" tabindex="-1" aria-label="Not available Sunday, April 30th, 2023" role="button" aria-disabled="true">30</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--disabled" tabindex="-1" aria-label="Not available Monday, May 1st, 2023" role="button" aria-disabled="true">1</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--disabled" tabindex="-1" aria-label="Not available Tuesday, May 2nd, 2023" role="button" aria-disabled="true">2</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--disabled" tabindex="-1" aria-label="Not available Wednesday, May 3rd, 2023" role="button" aria-disabled="true">3</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--004 react-datepicker__day--disabled" tabindex="-1" aria-label="Not available Thursday, May 4th, 2023" role="button" aria-disabled="true">4</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--005 react-datepicker__day--disabled" tabindex="-1" aria-label="Not available Friday, May 5th, 2023" role="button" aria-disabled="true">5</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--006 react-datepicker__day--disabled react-datepicker__day--weekend" tabindex="-1" aria-label="Not available Saturday, May 6th, 2023" role="button" aria-disabled="true">6</div>
+                                                                                        </div>
+                                                                                        <div class="react-datepicker__week">
+                                                                                            <div class="react-datepicker__day react-datepicker__day--007 react-datepicker__day--disabled react-datepicker__day--weekend" tabindex="-1" aria-label="Not available Sunday, May 7th, 2023" role="button" aria-disabled="true">7</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--008 react-datepicker__day--disabled" tabindex="-1" aria-label="Not available Monday, May 8th, 2023" role="button" aria-disabled="true">8</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--009 react-datepicker__day--disabled" tabindex="-1" aria-label="Not available Tuesday, May 9th, 2023" role="button" aria-disabled="true">9</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--010 react-datepicker__day--disabled" tabindex="-1" aria-label="Not available Wednesday, May 10th, 2023" role="button" aria-disabled="true">10</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--011 react-datepicker__day--disabled" tabindex="-1" aria-label="Not available Thursday, May 11th, 2023" role="button" aria-disabled="true">11</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--012 react-datepicker__day--disabled" tabindex="-1" aria-label="Not available Friday, May 12th, 2023" role="button" aria-disabled="true">12</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--013 react-datepicker__day--disabled react-datepicker__day--weekend" tabindex="-1" aria-label="Not available Saturday, May 13th, 2023" role="button" aria-disabled="true">13</div>
+                                                                                        </div>
+                                                                                        <div class="react-datepicker__week">
+                                                                                            <div class="react-datepicker__day react-datepicker__day--014 react-datepicker__day--disabled react-datepicker__day--weekend" tabindex="-1" aria-label="Not available Sunday, May 14th, 2023" role="button" aria-disabled="true">14</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--015 react-datepicker__day--disabled" tabindex="-1" aria-label="Not available Monday, May 15th, 2023" role="button" aria-disabled="true">15</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--016 react-datepicker__day--disabled" tabindex="-1" aria-label="Not available Tuesday, May 16th, 2023" role="button" aria-disabled="true">16</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--017 react-datepicker__day--disabled" tabindex="-1" aria-label="Not available Wednesday, May 17th, 2023" role="button" aria-disabled="true">17</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--018 react-datepicker__day--disabled" tabindex="-1" aria-label="Not available Thursday, May 18th, 2023" role="button" aria-disabled="true">18</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--019 react-datepicker__day--disabled" tabindex="-1" aria-label="Not available Friday, May 19th, 2023" role="button" aria-disabled="true">19</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--020 react-datepicker__day--disabled react-datepicker__day--weekend" tabindex="-1" aria-label="Not available Saturday, May 20th, 2023" role="button" aria-disabled="true">20</div>
+                                                                                        </div>
+                                                                                        <div class="react-datepicker__week">
+                                                                                            <div class="react-datepicker__day react-datepicker__day--021 react-datepicker__day--disabled react-datepicker__day--weekend" tabindex="-1" aria-label="Not available Sunday, May 21st, 2023" role="button" aria-disabled="true">21</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--022 react-datepicker__day--disabled" tabindex="-1" aria-label="Not available Monday, May 22nd, 2023" role="button" aria-disabled="true">22</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--023 react-datepicker__day--disabled" tabindex="-1" aria-label="Not available Tuesday, May 23rd, 2023" role="button" aria-disabled="true">23</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--024 react-datepicker__day--disabled" tabindex="-1" aria-label="Not available Wednesday, May 24th, 2023" role="button" aria-disabled="true">24</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--025 react-datepicker__day--disabled" tabindex="-1" aria-label="Not available Thursday, May 25th, 2023" role="button" aria-disabled="true">25</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--026 react-datepicker__day--disabled" tabindex="-1" aria-label="Not available Friday, May 26th, 2023" role="button" aria-disabled="true">26</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--027 react-datepicker__day--disabled react-datepicker__day--keyboard-selected react-datepicker__day--today react-datepicker__day--weekend" tabindex="0" aria-label="Not available Saturday, May 27th, 2023" role="button" aria-disabled="true">27</div>
+                                                                                        </div>
+                                                                                        <div class="react-datepicker__week">
+                                                                                            <div class="react-datepicker__day react-datepicker__day--028 react-datepicker__day--weekend" tabindex="-1" aria-label="Choose Sunday, May 28th, 2023" role="button" aria-disabled="false">28</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--029" tabindex="-1" aria-label="Choose Monday, May 29th, 2023" role="button" aria-disabled="false">29</div><div class="react-datepicker__day react-datepicker__day--030" tabindex="-1" aria-label="Choose Tuesday, May 30th, 2023" role="button" aria-disabled="false">30</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--031" tabindex="-1" aria-label="Choose Wednesday, May 31st, 2023" role="button" aria-disabled="false">31</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--outside-month" tabindex="-1" aria-label="Choose Thursday, June 1st, 2023" role="button" aria-disabled="false">1</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--outside-month" tabindex="-1" aria-label="Choose Friday, June 2nd, 2023" role="button" aria-disabled="false">2</div>
+                                                                                            <div class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--weekend react-datepicker__day--outside-month" tabindex="-1" aria-label="Choose Saturday, June 3rd, 2023" role="button" aria-disabled="false">3</div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <h2 class="ok_btn accordion-header">
+                                                                            <button type="button" aria-expanded="false" class="accordion-button collapsed">OK</button>
+                                                                        </h2>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mt-3">
+                                                    <div class="schedule_time">
+                                                        <p class="schedule_title">Enter Time</p>
+                                                        <div class="calendar_nd_date">
+                                                            <div class="accordion-item">
+                                                                <h2 class=" w-100 accordion-header">
+                                                                    <button type="button" aria-expanded="false" class="accordion-button collapsed">
+                                                                        <div class="d-flexs align-items-center ">
+                                                                            <ion-icon icon="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'>
+                                                                                <title>Time</title>
+                                                                                <path d='M256 48C141.13 48 48 141.13 48 256s93.13 208 208 208 208-93.13 208-208S370.87 48 256 48zm96 240h-96a16 16 0 01-16-16V128a16 16 0 0132 0v128h80a16 16 0 010 32z'/>
+                                                                                </svg>" role="img" class="md">
+                                                                            </ion-icon><span>Select Time</span>
+                                                                            <ion-icon icon="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'>
+                                                                                <title>Chevron Down</title>
+                                                                                <path stroke-linecap='round' stroke-linejoin='round' stroke-width='48' d='M112 184l144 144 144-144' class='ionicon-fill-none'/>
+                                                                                </svg>" class="arrow_down_icon md" role="img">
+                                                                            </ion-icon>
+                                                                        </div>
+                                                                    </button>
+                                                                </h2>
+                                                                <div class="accordion-collapse collapse">
+                                                                    <div class="accordion-body">
+                                                                        <div class="time_details">Please choose a different date.</div>
+                                                                        <h2 class="ok_btn accordion-header">
+                                                                            <button type="button" aria-expanded="false" class="accordion-button collapsed">OK</button>
+                                                                        </h2>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="location_tab ">
+                                            <div class="">
+                                                <p class="schedule_title">Select an Address</p>
+                                                <div class="accordion-item">
+                                                    <div class="address_local calendar_nd_date">
+                                                        <h2 class="w-100 accordion-header">
+                                                            <button type="button" aria-expanded="false" class="accordion-button collapsed">
+                                                                <div class="d-flexs align-items-center ">
+                                                                    <ion-icon icon="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'>
+                                                                        <title>Location</title><circle cx='256' cy='192' r='32'/>
+                                                                        <path d='M256 32c-88.22 0-160 68.65-160 153 0 40.17 18.31 93.59 54.42 158.78 29 52.34 62.55 99.67 80 123.22a31.75 31.75 0 0051.22 0c17.42-23.55 51-70.88 80-123.22C397.69 278.61 416 225.19 416 185c0-84.35-71.78-153-160-153zm0 224a64 64 0 1164-64 64.07 64.07 0 01-64 64z'/></svg>" role="img" class="md">
+                                                                    </ion-icon><span>Choose Address</span>
+                                                                    <ion-icon icon="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'>
+                                                                        <title>Chevron Down</title>
+                                                                        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='48' d='M112 184l144 144 144-144' class='ionicon-fill-none'/></svg>" class="arrow_down_icon md" role="img">
+                                                                    </ion-icon>
+                                                                </div>
+                                                            </button>
+                                                        </h2>
+                                                        <div class="accordion-collapse collapse">
+                                                            <div class="accordion-body">
+                                                                <ul class="local_address_ul">
+                                                                    <li class="local_address_li">
+                                                                        <div class="local_address_div" title="356, karnik nagar, Unknown, 110001">
+                                                                            <p class="category_text ">home</p>
+                                                                            <p class="address_line">356, karnik nagar, Unknown, 110001</p>
+                                                                        </div>
+                                                                        <div class="trash_div">
+                                                                            <ion-icon icon="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'>
+                                                                                <title>Trash</title>
+                                                                                <path d='M112 112l20 320c.95 18.49 14.4 32 32 32h184c17.67 0 30.87-13.51 32-32l20-320' stroke-linecap='round' stroke-linejoin='round' class='ionicon-fill-none ionicon-stroke-width'/>
+                                                                                <path stroke-linecap='round' stroke-miterlimit='10' d='M80 112h352' class='ionicon-stroke-width'/>
+                                                                                <path d='M192 112V72h0a23.93 23.93 0 0124-24h80a23.93 23.93 0 0124 24h0v40M256 176v224M184 176l8 224M328 176l-8 224' stroke-linecap='round' stroke-linejoin='round' class='ionicon-fill-none ionicon-stroke-width'/></svg>" class="trash_icon md" role="img">
+                                                                            </ion-icon>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li class="local_address_li add_new_address_btn">Add New Address</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="location_tab">
+                                            <div class="weight_select_div">
+                                                <div class="schedule_title">
+                                                    <span class="estimate_title">Estimated Weight </span>
+                                                </div>
+                                                <div class="accordion-item">
+                                                    <div class="address_local calendar_nd_date">
+                                                        <h2 class="w-100 accordion-header">
+                                                            <button type="button" aria-expanded="false" class="accordion-button collapsed">
+                                                                <div class="d-flexs align-items-center ">
+                                                                    <ion-icon icon="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'>
+                                                                        <title>Cube</title>
+                                                                        <path d='M440.9 136.3a4 4 0 000-6.91L288.16 40.65a64.14 64.14 0 00-64.33 0L71.12 129.39a4 4 0 000 6.91L254 243.88a4 4 0 004.06 0zM54 163.51a4 4 0 00-6 3.49v173.89a48 48 0 0023.84 41.39L234 479.51a4 4 0 006-3.46V274.3a4 4 0 00-2-3.46zM272 275v201a4 4 0 006 3.46l162.15-97.23A48 48 0 00464 340.89V167a4 4 0 00-6-3.45l-184 108a4 4 0 00-2 3.45z'/></svg>" role="img" class="md">
+                                                                    </ion-icon>
+                                                                    <span>Select Weight</span>
+                                                                    <ion-icon icon="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'>
+                                                                        <title>Chevron Down</title>
+                                                                        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='48' d='M112 184l144 144 144-144' class='ionicon-fill-none'/></svg>" class="arrow_down_icon md" role="img">
+                                                                    </ion-icon>
+                                                                </div>
+                                                            </button>
+                                                        </h2>
+                                                        <div class="accordion-collapse collapse">
+                                                                        <div class="accordion-body">
+                                                                            <ul class="local_address_ul">
+                                                                                <li class="local_weight_li" value="1/Less than 20kg/true/undefined">Less than 20kg</li>
+                                                                                <li class="local_weight_li" value="2/20-50kg/true/undefined">20-50kg</li>
+                                                                                <li class="local_weight_li" value="3/50-100kg/true/undefined">50-100kg</li>
+                                                                                <li class="local_weight_li" value="4/100-700kg/true/undefined">100-700kg</li>
+                                                                                <li class="local_weight_li" value="5/More than 700kg/true/undefined">More than 700kg</li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6 mt-3">
+                                                            <div class="location_tab ">
+                                                                <div class="">
+                                                                    <p class="schedule_title remark_title">
+                                                                        <span>Remarks</span>
+                                                                        <span class="local_optional_text">(Optional)</span>
+                                                                    </p>
+                                                                    <div class="remarks_local calendar_nd_date">
+                                                                        <input name="message" class="remarks_input">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="location_tab pb-2">
+                                                        <ion-button type="submit" class="schedule_pickup_button_local md button button-solid ion-activatable ion-focusable">Schedule A Pickup</ion-button>
+                                                        <p style="font-size: 0.9rem; font-weight: 500; margin-bottom: 4rem;">
+                                                            <span style="font-style: italic;">To view the scheduled pickups click</span>
+                                                            <span style="color: green; font-weight: 600; margin-left: 0.4rem; cursor: pointer;">Check My Pickups</span>
+                                                        </p>
+                                                        <div class="help_text schedule_page">Facing Problems? Call us at <a href="tel:+918595358613">+918595358613</a></div>
+                                                        <p class="fill_schedule_text">
+                                                            <ion-icon icon="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'>
+                                                                <title>Help Circle</title>
+                                                                <path d='M256 64C150 64 64 150 64 256s86 192 192 192 192-86 192-192S362 64 256 64zm-6 304a20 20 0 1120-20 20 20 0 01-20 20zm33.44-102C267.23 276.88 265 286.85 265 296a14 14 0 01-28 0c0-21.91 10.08-39.33 30.82-53.26C287.1 229.8 298 221.6 298 203.57c0-12.26-7-21.57-21.49-28.46-3.41-1.62-11-3.2-20.34-3.09-11.72.15-20.82 2.95-27.83 8.59C215.12 191.25 214 202.83 214 203a14 14 0 11-28-1.35c.11-2.43 1.8-24.32 24.77-42.8 11.91-9.58 27.06-14.56 45-14.78 12.7-.15 24.63 2 32.72 5.82C312.7 161.34 326 180.43 326 203.57c0 33.83-22.61 49.02-42.56 62.43z'/></svg>" class="help_circle_icon md" role="img">
+                                                            </ion-icon>Please fill all the required details to schedule pickup
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </ion-router-outlet>
+                            <ion-toast class="overlay-hidden md" id="ion-overlay-1" aria-live="polite" aria-atomic="true" role="status" tabindex="-1" style="z-index: 60001;">
+                            </ion-toast>
+                        </ion-app>
+                    </div>
+                    <script defer="defer" src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+                    <script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                    <script defer="defer" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                    <script src="https://wchat.freshchat.com/js/widget.js"></script>
+                    <script type="text/javascript" id="" src="https://cdn.lr-in.com/LogRocket.min.js"></script>
+                    <script type="application/ld+json">
+                    {
+                    "@context" : "http://schema.org",
+                    "@type" : "LocalBusiness",
+                    "name" : "ScrapUncle",
+                    "image" : "https://ik.imagekit.io/h1rxzpffx/scrapuncle/ScrapUncleNewLogo_LimmzWp0YWe.png",
+                    "telephone" : "8595358613",
+                    "email" : "team@scrapuncle.com",
+                    "address" : {
+                        "@type" : "PostalAddress",
+                        "streetAddress" : "Incubation Center",
+                        "addressLocality" : "IIIT Delhi",
+                        "addressRegion" : "Okhla Phase -3 New Delhi",
+                        "addressCountry" : "India",
+                        "postalCode" : "110020"
+                    },
+                    "openingHoursSpecification" : {
+                        "@type" : "OpeningHoursSpecification",
+                        "dayOfWeek" : {
+                        "@type" : "DayOfWeek",
+                        "name" : "Monday - Sunday"
+                        }
+                    },
+                    "url" : "http://www.scrapuncle.com/",
+                    "aggregateRating" : {
+                        "@type" : "AggregateRating",
+                        "bestRating" : "The Swapeco Team was really professional and their services the best that I have seen in my entire life of 45 years. Could not have asked anything more. Simply awesome 👏�"
+                    },
+                    "review" : {
+                        "@type" : "Review",
+                        "author" : {
+                        "@type" : "Person",
+                        "name" : "Sudip Chatterjee"
+                        }
+                    }
+                    }
+                    </script>
+
+                    <meta name="facebook-domain-verification" content="lcymcgog2oogxxhr45o06o0hhuzgxm">
+                    <script type="text/javascript" id="">
+                        !function(b,e,f,g,a,c,d)
+                        {
+                            b.fbq||(a=b.fbq=function()
+                            {
+                                a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)
+                            }
+                            ,b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))
+                        }
+                        (window,document,"script","https://connect.facebook.net/en_US/fbevents.js");
+                        fbq("init","324828658638490");
+                        fbq("set","agent","tmgoogletagmanager","324828658638490");
+                        fbq("track","PageView");
+                    </script>
+                    <noscript>
+                        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=324828658638490&amp;ev=PageView&amp;noscript=1">
+                    </noscript>
+                        <script type="text/javascript" id="">(function(a,e,b,f,g,c,d)
+                            {
+                                a[b]=a[b]||function()
+                                {
+                                    (a[b].q=a[b].q||[]).push(arguments)
+                                };
+                                c=e.createElement(f);
+                                c.async=1;
+                                c.src="https://www.clarity.ms/tag/"+g+"?ref\x3dgtm2";
+                                d=e.getElementsByTagName(f)[0];
+                                d.parentNode.insertBefore(c,d)
+                            })(window,document,{"clarity"},"script","g4wnu7uozy");
+                        </script>
+                    <script type="text/javascript" async="" src="https://widgets.in.webengage.com/js/webengage-min-v-6.0.js"> 
+                    </script>
+                    <script type="text/javascript" id="_webengage_script_tag">
+                    var webengage;
+                    !function(a,k,b,e,l)
+                    {
+                        function h(f,g)
+                        {
+                            f[g[g.length-1]]=function()
+                            {
+                                c.__queue.push([g.join("."),arguments])
+                            }
+                        }
+                        var c=a[b],d=" ",m="init options track screen onReady".split(d);
+                        var e="webPersonalization feedback survey notification notificationInbox".split(d);
+                        var l="options render clear abort".split(d);
+                        var n="Prepare Render Open Close Submit Complete"; 
+                        View Click.split(d);
+                        var d="identify login logout setAttribute".split(d);
+                        if(!c||!c.__v)
+                        {
+                            a[b]=c={__queue:[],__v:"6.0",user:{}
+                        };
+                        for(a=0;a<m.length;a++)
+                        {
+                        h(c,[m[a]]);
+                            for(a=0;a<e.length;a++)
+                            {
+                                c[e[a]]={};
+                                for(b=0;b<l.length;b++)
+                                {
+                                    h(c[e[a]],[e[a],l[b]]);
+                                    for(b=0;b<n.length;b++)
+                                    {
+                                        h(c[e[a]],[e[a],"on"+n[b]])
+                                    }
+                                }
+                            }
+                        }
+                        for(a=0;a<d.length;a++)
+                        h(c.user,["user",d[a]]);
+                        setTimeout(function()
+                        {
+                            var f=k.createElement("script"),g=k.getElementById("_webengage_script_tag");
+                            f.type="text/javascript";
+                            f.async=!0;
+                            f.src=("https:"==k.location.protocol?"https://widgets.in.webengage.com":"http://widgets.in.webengage.com")+"/js/webengage-min-v-6.0.js";g.parentNode.insertBefore(f,g)
+                        })
+                    }
+                }
+                (window,document,"webengage");
+                        webengage.init("in~~991991bc");
+        </script>
+
+        <script type="text/javascript" id="">window.LogRocket&&window.LogRocket.init("5xse9d/swapeco");</script>
+        <webengagedata>
+            <style type="text/css">#webklipper-publisher-widget-container, #webklipper-publisher-widget-container * {overflow:visible; -webkit-box-sizing: content-box;  -moz-box-sizing: content-box;  box-sizing: content-box; margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}</style>
+            <div id="webklipper-publisher-widget-container">
+                <iframe title="webengage-engagement-callback-frame" name="webengage-engagement-callback-frame" id="webengage-engagement-callback-frame" frameborder="0" marginheight="0" marginwidth="0" style="position: absolute; background-color: transparent; bottom: 0px; right: 0px; border: none; overflow: hidden; visibility: hidden; display: none;"></iframe>
+                <iframe title="_we_wk_data_store" name="_we_wk_data_store" id="_we_wk_data_store" frameborder="0" marginheight="0" marginwidth="0" src="https://inzz991991bc.in.webengage.co/storage-frame-1.13.htm?cdn=y&amp;cbf=webengage-engagement-callback-frame&amp;lc=in~~991991bc" style="position: absolute; background-color: transparent; bottom: 0px; right: 0px; border: none; overflow: hidden; visibility: hidden; display: none;">
+                </iframe>
+                <script type="text/javascript" charset="UTF-8" async="" src="https://c.in.webengage.com/upf.js?lp=https%3A%2F%2Fscrapuncle.com%2Flocal-rate&amp;rf=https%3A%2F%2Fwww.google.com%2F&amp;geo=y&amp;jsonp=_we_jsonp_global_cb_1685209637909">
+                </script>
+            </div>
+        </webengagedata>
+        <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2qy2lFASUCsACEu2N8aQyy63O5OkVZok&amp;libraries&amp;libraries=places"></script>
+        <script type="text/javascript">window.dataLayer=window.dataLayer||[]</script>
+        <script type="text/javascript" id="">webengage.track("Top Menu Clicked",{"Menu Name":google_tag_manager["GTM-5MKQPF3"].macro(28)});</script>
+        <script type="text/javascript" id="">webengage.track("Top Menu Clicked",{"Menu Name":google_tag_manager["GTM-5MKQPF3"].macro(33)});</script>
+        <script type="text/javascript" id="">webengage.track("Top Menu Clicked",{"Menu Name":google_tag_manager["GTM-5MKQPF3"].macro(38)});</script>
+        <script type="text/javascript" id="">webengage.track("Top Menu Clicked",{"Menu Name":google_tag_manager["GTM-5MKQPF3"].macro(43)});</script>
+        <script type="text/javascript" id="">webengage.track("OTP Entered",{});</script>
+        <script type="text/javascript" id="">webengage.user.login("9665101375");
+            webengage.user.setAttribute("we_phone","+919665101375");
+        </script>
+    
+        
+    </body>
+</html>
